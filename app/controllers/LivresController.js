@@ -73,6 +73,8 @@ module.exports = (db) => {
                 return res.status(400).send({"Error": 400, "Message": "Invalid request"});
             }
 
+            console.log(id);
+
             try {
 
                 await Books.destroy({
@@ -80,6 +82,8 @@ module.exports = (db) => {
                         id: id
                     }
                 });
+
+                return res.sendStatus(200);
 
             } catch {
                 return res.status(500).send({"Error": 500, "Message": "Server error, check if your data is correct"});
