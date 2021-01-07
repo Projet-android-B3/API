@@ -60,7 +60,7 @@ module.exports = (db) => {
                     }
                 });
 
-                return res.sendStatus(200);
+                return res.sendStatus(201);
             } catch {
                 return res.status(500).send({"Error": 500, "Message": "Server error, check if your data is correct"});
             }
