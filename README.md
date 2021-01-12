@@ -1,17 +1,7 @@
-# API basique d'accès à des livres
+# API du Pokédex (Projet Atelier développement mobile B3)
 
 ## Pour installer
 
-`npm install` ou `yarn install`
+`npm install` ou `yarn install && yarn run serve`
 
 ## Les routes
-
-GET /books
-
-GET /books/:id
-
-POST /books
-
-PUT /books/:id
-
-DELETE /books/:id

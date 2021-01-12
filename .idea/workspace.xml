@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59cd7c6b-6f14-40c0-ad9f-6f42f31944fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/LivresController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/LivresController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Utils/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/20210107093837-create-livres.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Livre.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/core.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/core.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/seeders/20210107094401-livres.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +71,23 @@
       <workItem from="1604310704600" duration="829000" />
       <workItem from="1604318855911" duration="1092000" />
       <workItem from="1610011726109" duration="5032000" />
-      <workItem from="1610020914098" duration="687000" />
+      <workItem from="1610020914098" duration="895000" />
+      <workItem from="1610455341740" duration="5098000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

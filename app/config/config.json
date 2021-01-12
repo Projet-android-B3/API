@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "sc2adlo9657_basicAPI",
-    "password": "sc2adlo9657_basicAPI",
-    "database": "sc2adlo9657_basicAPI",
-    "host": "109.234.164.17",
+    "username": "app-android",
+    "password": "app-android",
+    "database": "app-android",
+    "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "logging": false
