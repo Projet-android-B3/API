@@ -2,31 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59cd7c6b-6f14-40c0-ad9f-6f42f31944fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/PokemonController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/SecurityController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/TeamController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/Pokemon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/Team.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/20210112153448-create-team.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/team.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/pokemon.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/security.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/team.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Utils/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Tools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/20210107093837-create-livres.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Livre.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/core.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/core.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/seeders/20210107094401-livres.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/LivresController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/core.routes.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ihjgJyRyMelZR0AXaoyp721YW5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -72,7 +87,8 @@
       <workItem from="1604318855911" duration="1092000" />
       <workItem from="1610011726109" duration="5032000" />
       <workItem from="1610020914098" duration="895000" />
-      <workItem from="1610455341740" duration="5098000" />
+      <workItem from="1610455341740" duration="8095000" />
+      <workItem from="1610694104282" duration="4164000" />
     </task>
     <servers />
   </component>
@@ -89,5 +105,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

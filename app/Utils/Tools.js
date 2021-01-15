@@ -28,11 +28,25 @@ let Tools = {
                         speed: pokemon.base.Speed
                     });
                 }
-            } catch(err) {
+            } catch (err) {
                 console.log('Error parsing JSON string:', err)
                 return res.sendStatus(500);
             }
         })
+        return res.sendStatus(200);
+    },
+
+    paramMissing: (res) => {
+        return res.status(400).send('Il manque un paramètre');
+    },
+
+    itemNotFound: (res) => {
+        return res.status(404).send('Objet non trouvé');
+    },
+    internalError: (res) => {
+        return res.status(500).send('Une erreur s est produite');
+    },
+    success: (res) => {
         return res.sendStatus(200);
     }
 
