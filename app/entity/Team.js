@@ -19,7 +19,6 @@ module.exports = (Teams) => {
                         user_id: user_id
                     }
                 });
-
                 return true;
             } catch {
                 return false;
