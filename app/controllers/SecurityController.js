@@ -59,8 +59,28 @@ module.exports = (db) => {
 
             const {email, firstname, lastname, password} = req.body;
 
+            const user = await Users.findOne({
+                where: {
+                    email: email
+                }
+            });
 
+            if (user) {
+                // We use paramMissing for the Bad Request
+                return Tools.paramMissing(res);
+            }
 
+            try {
+                await Users.create({
+                    email: email,
+                    firstname: firstname,
+                    lastname: lastname,
+                    password: password
+                });
+                return Tools.success(res);
+            } catch {
+                return Tools.internalError(res);
+            }
         }
     }
 }

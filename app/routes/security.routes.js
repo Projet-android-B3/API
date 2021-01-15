@@ -6,4 +6,6 @@ module.exports = (app, db) => {
     const SecurityController = require('../controllers/SecurityController')(db);
 
     app.post('/login', SecurityController.login);
+
+    app.post('/register', SecurityController.register);
 }
