@@ -14,7 +14,7 @@ module.exports = (db) => {
 
             try {
                 // Check if user exists
-                const user = Users.findOne({
+                const user = await Users.findOne({
                     where: {
                         email: email
                     }
