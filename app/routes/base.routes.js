@@ -3,7 +3,7 @@ const Tools = require('../utils/Tools');
 
 module.exports = (app, db) => {
 
-    app.get('/', function () {
-        console.log("API works");
+    app.get('/', function (req, res) {
+        res.send("API works");
     });
 }
