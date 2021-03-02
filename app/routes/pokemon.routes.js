@@ -10,7 +10,7 @@ module.exports = (app, db) => {
 
     app.get('/getPokemons', TokenMiddleware.tokenCheck, PokemonController.getPokemons);
 
-    app.get('/getPokemon/:id', PokemonController.getPokemonById);
+    app.get('/getPokemon/:id', TokenMiddleware.tokenCheck, PokemonController.getPokemonById);
 
-    app.delete('/deletePokemon/:id', PokemonController.deletePokemonById);
+    app.delete('/deletePokemon/:id', TokenMiddleware.tokenCheck, PokemonController.deletePokemonById);
 }
