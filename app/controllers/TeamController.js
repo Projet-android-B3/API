@@ -25,7 +25,7 @@ module.exports = (db) => {
 
         editTeam: async (req, res) => {
 
-            const id = req.body.user_id;
+            const id = req.params.user_id;
             const pokemonList = req.body.list;
 
             if (!id || !pokemonList) {
