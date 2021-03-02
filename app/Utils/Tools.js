@@ -41,7 +41,7 @@ let Tools = {
     },
 
     itemNotFound: (res) => {
-        return res.status(404).send('Objet non trouvé');
+        return res.status(404).send();
     },
     internalError: (res) => {
         return res.status(500).send('Une erreur s est produite');

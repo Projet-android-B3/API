@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59cd7c6b-6f14-40c0-ad9f-6f42f31944fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/middlewares/TokenCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/SecurityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/SecurityController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Utils/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/pokemon.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/pokemon.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +34,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -84,7 +86,10 @@
       <workItem from="1610694104282" duration="5462000" />
       <workItem from="1612855521339" duration="2722000" />
       <workItem from="1613052084486" duration="3599000" />
-      <workItem from="1613058795927" duration="614000" />
+      <workItem from="1613058795927" duration="992000" />
+      <workItem from="1613063747084" duration="275000" />
+      <workItem from="1613151185893" duration="128000" />
+      <workItem from="1614671330287" duration="1849000" />
     </task>
     <servers />
   </component>
