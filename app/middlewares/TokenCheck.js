@@ -7,18 +7,23 @@ module.exports = (db) => {
 
             // Check which token is used
             let token = req.body.token ? req.body.token : null;
+            let userId= req.body.userId;
 
             if (token == null) return Tools.itemNotFound(res);
 
             try {
 
-                const tokenFromDb = await Users.findOne({
+                const user = await Users.findOne({
                     where: {
-                        token: token
+                        id: userId
                     }
                 });
 
-                if (!tokenFromDb) {
+                if (!user) {
+                    return Tools.itemNotFound(res);
+                }
+
+                if (user.token !== token) {
                     return Tools.itemNotFound(res);
                 }
 

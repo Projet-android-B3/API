@@ -90,9 +90,13 @@ module.exports = (db) => {
                 });
 
                 return Tools.success(res);
-            } catch {
-                return Tools.internalError(res);
+            } catch (err) {
+                return Tools.internalError(res, err);
             }
+        },
+
+        checkToken: async (req, res) => {
+            return res.sendStatus(200);
         }
     }
 }

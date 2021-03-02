@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     lastname: DataTypes.STRING,
     password: DataTypes.TEXT("long"),
     token: DataTypes.TEXT("long"),
-    isAdmin: DataTypes.BOOLEAN
+    // isAdmin: DataTypes.BOOLEAN
   }, {
     updatedAt: 'updated_at',
     createdAt: 'created_at',
