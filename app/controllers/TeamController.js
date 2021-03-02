@@ -13,7 +13,7 @@ module.exports = (db) => {
             }
 
             try {
-                const team = await TeamEntity.getById(id);
+                const team = await TeamEntity.getByUserId(id);
                 if (!team) {
                     return Tools.itemNotFound(res);
                 }

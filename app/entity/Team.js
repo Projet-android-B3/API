@@ -5,10 +5,10 @@ module.exports = (Teams) => {
         getAll: async () => {
             return await Teams.findAll();
         },
-        getById: async (id) => {
+        getByUserId: async (id) => {
             return await Teams.findOne({
                 where: {
-                    id: id
+                    userId: id
                 }
             });
         },

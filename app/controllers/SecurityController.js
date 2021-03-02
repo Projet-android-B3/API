@@ -1,6 +1,7 @@
 'use strict';
 module.exports = (db) => {
     const Users = db.User;
+    const Teams = db.Team;
     const Tools = require('../utils/Tools');
     const crypto = require('crypto');
     return {
@@ -28,24 +29,35 @@ module.exports = (db) => {
 
                 if (user.password === password) {
 
-                    // Create user to send, because we don't want to send the user's password
-                    const userToSend = {
-                        id: user.id,
-                        email: user.email,
-                        firstname: user.firstname,
-                        lastname: user.lastname,
-                        token: crypto.randomBytes(48, async function (err, buffer) {
-                            const token = buffer.toString('hex');
-                            await Users.update({token: token}, {
-                                where: {
-                                    id: user.id
-                                }
-                            });
-                            return token;
-                        })
-                    };
+                    crypto.randomBytes(48, async function (err, buffer) {
 
-                    return res.send(userToSend);
+                        const token = buffer.toString('hex');
+
+                        // Create user to send, because we don't want to send the user's password
+                        const userToSend = {
+                            id: user.id,
+                            email: user.email,
+                            firstname: user.firstname,
+                            lastname: user.lastname,
+                            // isAdmin: user.isAdmin,
+                            userToken: token
+                        };
+
+                        await Users.update({token: token}, {
+                            where: {
+                                id: userToSend.id
+                            }
+                        });
+
+                        await Teams.create({
+                            list: '',
+                            userId: user.id
+                        });
+
+
+                        return res.send(userToSend);
+                    });
+
                 } else {
                     return Tools.itemNotFound(res);
                 }
@@ -57,7 +69,7 @@ module.exports = (db) => {
 
         register: async (req, res) => {
 
-            const {email, firstname, lastname, password} = req.body;
+            const {email, password} = req.body;
 
             const user = await Users.findOne({
                 where: {
@@ -72,9 +84,8 @@ module.exports = (db) => {
 
             try {
                 await Users.create({
+                    id: Tools.uuid(),
                     email: email,
-                    firstname: firstname,
-                    lastname: lastname,
                     password: password
                 });
                 return Tools.success(res);

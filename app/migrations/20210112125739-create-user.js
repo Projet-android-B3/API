@@ -26,6 +26,10 @@ module.exports = {
       token: {
         type: Sequelize.TEXT('long')
       },
+      isAdmin: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: 0
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE

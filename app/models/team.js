@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Team.init({
-    list: DataTypes.JSON
+    list: DataTypes.JSON,
+    userId: DataTypes.UUID,
   }, {
     updatedAt: 'updated_at',
     createdAt: 'created_at',

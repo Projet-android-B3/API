@@ -11,6 +11,10 @@ module.exports = {
         type: Sequelize.UUID,
         defaultValue: Tools.uuid()
       },
+      userId: {
+        allowNull: false,
+        type: Sequelize.UUID,
+      },
       list: {
         type: Sequelize.JSON
       },
