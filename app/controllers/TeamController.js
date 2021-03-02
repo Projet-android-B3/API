@@ -33,19 +33,11 @@ module.exports = (db) => {
             }
 
             try {
-
-                if (await TeamEntity.edit({
-                    userId: id,
-                    list: list
-                })) {
-                    return Tools.success(res);
-                } else {
-                    return Tools.internalError(res);
-                }
-            } catch {
-                return Tools.internalError(res);
+                await TeamEntity.edit(id, pokemonList)
+            } catch (err) {
+                return Tools.internalError(res, err);
             }
-
+            return Tools.success(res);
         }
     }
 }

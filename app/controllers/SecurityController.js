@@ -49,12 +49,6 @@ module.exports = (db) => {
                             }
                         });
 
-                        await Teams.create({
-                            list: '',
-                            userId: user.id
-                        });
-
-
                         return res.send(userToSend);
                     });
 
@@ -83,11 +77,18 @@ module.exports = (db) => {
             }
 
             try {
-                await Users.create({
+                const user = await Users.create({
                     id: Tools.uuid(),
                     email: email,
                     password: password
                 });
+
+                await Teams.create({
+                    id: Tools.uuid(),
+                    list: null,
+                    userId: user.id
+                });
+
                 return Tools.success(res);
             } catch {
                 return Tools.internalError(res);

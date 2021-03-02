@@ -16,7 +16,7 @@ module.exports = (Teams) => {
             try {
                 await Teams.update({list: pokemonList}, {
                     where: {
-                        user_id: user_id
+                        userId: user_id
                     }
                 });
                 return true;
