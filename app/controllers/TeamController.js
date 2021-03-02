@@ -34,7 +34,10 @@ module.exports = (db) => {
 
             try {
 
-                if (await TeamEntity.edit(id, pokemonList)) {
+                if (await TeamEntity.edit({
+                    userId: id,
+                    list: list
+                })) {
                     return Tools.success(res);
                 } else {
                     return Tools.internalError(res);
