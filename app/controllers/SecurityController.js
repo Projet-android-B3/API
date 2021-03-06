@@ -29,28 +29,25 @@ module.exports = (db) => {
 
                 if (user.password === password) {
 
-                    crypto.randomBytes(48, async function (err, buffer) {
+                    const token = Tools.uuid();
 
-                        const token = buffer.toString('hex');
+                    // Create user to send, because we don't want to send the user's password
+                    const userToSend = {
+                        id: user.id,
+                        email: user.email,
+                        firstname: user.firstname,
+                        lastname: user.lastname,
+                        // isAdmin: user.isAdmin,
+                        userToken: token
+                    };
 
-                        // Create user to send, because we don't want to send the user's password
-                        const userToSend = {
-                            id: user.id,
-                            email: user.email,
-                            firstname: user.firstname,
-                            lastname: user.lastname,
-                            // isAdmin: user.isAdmin,
-                            userToken: token
-                        };
-
-                        await Users.update({token: token}, {
-                            where: {
-                                id: userToSend.id
-                            }
-                        });
-
-                        return res.send(userToSend);
+                    await Users.update({token: token}, {
+                        where: {
+                            id: userToSend.id
+                        }
                     });
+
+                    return res.send(userToSend);
 
                 } else {
                     return Tools.itemNotFound(res);

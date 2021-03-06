@@ -6,31 +6,37 @@ module.exports = (db) => {
         tokenCheck: async(req, res, next) => {
 
             // Check which token is used
-            let token = req.body.token ? req.body.token : null;
-            let userId= req.body.userId;
+            let token = req.headers.authorization;
 
-            if (token == null) return Tools.itemNotFound(res);
+
+
+            if (!token) return Tools.itemNotFound(res, 'Throw error in tokenCheck:13');
+
+            const authorization = token.split(' ')[1];
+
+            if (!authorization) return Tools.itemNotFound(res, 'Throw error in tokenCheck:17');
 
             try {
 
                 const user = await Users.findOne({
                     where: {
-                        id: userId
+                        token: authorization
                     }
                 });
 
                 if (!user) {
-                    return Tools.itemNotFound(res);
+                    return Tools.itemNotFound(res, 'Throw error in tokenCheck:28');
                 }
 
-                if (user.token !== token) {
-                    return Tools.itemNotFound(res);
-                }
+                // Enable if user_id is sent with the req
+                // if (user.token !== token) {
+                //     return Tools.itemNotFound(res);
+                // }
 
                 next();
 
-            } catch {
-                return Tools.internalError(res);
+            } catch (err) {
+                return Tools.internalError(res, err);
             }
         }
     }
