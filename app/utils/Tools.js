@@ -36,18 +36,18 @@ let Tools = {
         return res.sendStatus(200);
     },
 
-    paramMissing: (res) => {
-        return res.status(400).send('Il manque un paramètre');
+    paramMissing: (res, message) => {
+        return res.status(400).send({success: false, message: message});
     },
 
-    itemNotFound: (res) => {
-        return res.status(404).send();
+    itemNotFound: (res, message = null) => {
+        return res.status(404).send({success: false, message: message ? message : 'Item not found'});
     },
     internalError: (res, err = null) => {
-        return res.status(500).send(err);
+        return res.status(500).send({success: false, message: err ? err : 'Internal server error'});
     },
-    success: (res) => {
-        return res.sendStatus(200);
+    success: (res, data) => {
+        return res.status(200).send({success: true, message: 'Success', data: data});
     }
 
 }
