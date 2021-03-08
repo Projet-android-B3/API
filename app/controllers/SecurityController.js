@@ -3,7 +3,7 @@ module.exports = (db) => {
     const Users = db.User;
     const Teams = db.Team;
     const Tools = require('../utils/Tools');
-    const crypto = require('crypto');
+
     return {
         login: async (req, res) => {
 
