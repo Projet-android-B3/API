@@ -10,5 +10,5 @@ module.exports = (app, db) => {
 
     app.post('/register', SecurityController.register);
 
-    app.post('/checkToken', TokenMiddleware.tokenCheck, SecurityController.checkToken);
+    app.get('/checkToken', TokenMiddleware.tokenCheck, SecurityController.checkToken);
 }
