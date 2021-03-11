@@ -1,6 +1,7 @@
 'use strict';
 require('dotenv').config();
 const {v4: uuid} = require('uuid');
+const crypto = require('crypto');
 
 
 let Tools = {
@@ -34,6 +35,9 @@ let Tools = {
             }
         })
         return res.sendStatus(200);
+    },
+    hashPassword: (pwd) => {
+        return crypto.createHash('sha256').update(pwd).digest('hex');
     },
 
     paramMissing: (res, message) => {

@@ -27,7 +27,7 @@ module.exports = (db) => {
 
                 // Check if passwords match
 
-                if (user.password === password) {
+                if (user.password === Tools.hashPassword(password)) {
 
                     const token = Tools.uuid();
 
@@ -77,7 +77,7 @@ module.exports = (db) => {
                 const user = await Users.create({
                     id: Tools.uuid(),
                     email: email,
-                    password: password
+                    password: Tools.hashPassword(password)
                 });
 
                 await Teams.create({
