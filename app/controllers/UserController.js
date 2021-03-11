@@ -38,7 +38,9 @@ module.exports = (db) => {
 
         getAll: async (req, res) => {
 
-            return res.send(await Users.findAll());
+            return res.send(await Users.findAll({
+                attributes: ['id', 'email', 'isAdmin']
+            }));
 
         }
     }

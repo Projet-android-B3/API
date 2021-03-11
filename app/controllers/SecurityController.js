@@ -37,7 +37,7 @@ module.exports = (db) => {
                         email: user.email,
                         firstname: user.firstname,
                         lastname: user.lastname,
-                        // isAdmin: user.isAdmin,
+                        isAdmin: user.isAdmin,
                         userToken: token
                     };
 

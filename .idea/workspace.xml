@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59cd7c6b-6f14-40c0-ad9f-6f42f31944fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/middlewares/Admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/SecurityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/SecurityController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/user.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/Tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +105,9 @@
       <workItem from="1615221247686" duration="2711000" />
       <workItem from="1615293306841" duration="1239000" />
       <workItem from="1615303161344" duration="913000" />
-      <workItem from="1615480620803" duration="293000" />
+      <workItem from="1615480620803" duration="624000" />
+      <workItem from="1615482139675" duration="514000" />
+      <workItem from="1615487421730" duration="1019000" />
     </task>
     <servers />
   </component>

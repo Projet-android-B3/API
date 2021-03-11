@@ -8,6 +8,7 @@ const path = require('path');
 const Tools = require('./app/utils/Tools');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+// const pathToSwaggerUi = require('swagger-ui-dist').absolutePath();
 
 const app = express();
 const port = 3000;
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({
     extended: true,
 }));
 app.use(bodyParser.json());
+// app.use(express.static(pathToSwaggerUi));
 
 db.sequelize.sync()
     .then(() => {

@@ -4,9 +4,10 @@ const Tools = require('../utils/Tools');
 module.exports = (app, db) => {
 
     const TokenMiddleware = require('../middlewares/TokenCheck')(db);
+    const AdminMiddleware = require('../middlewares/Admin')(db);
     const UserController = require('../controllers/UserController')(db);
 
-    app.get('/users', TokenMiddleware.tokenCheck, UserController.getAll);
+    app.get('/users', TokenMiddleware.tokenCheck, AdminMiddleware.isAdmin, UserController.getAll);
 
-    app.post('/deleteUser', TokenMiddleware.tokenCheck, UserController.delete);
+    app.post('/deleteUser', TokenMiddleware.tokenCheck, AdminMiddleware.isAdmin, UserController.delete);
 }

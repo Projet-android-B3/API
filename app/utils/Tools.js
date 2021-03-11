@@ -39,6 +39,16 @@ let Tools = {
     hashPassword: (pwd) => {
         return crypto.createHash('sha256').update(pwd).digest('hex');
     },
+    getRequestHeaderToken: (req) => {
+        let token = req.headers.authorization;
+        if (!token) return false;
+
+        const authorization = token.split(' ')[1];
+
+        if (!authorization) return false;
+
+        return authorization;
+    },
 
     paramMissing: (res, message) => {
         return res.status(400).send({success: false, message: message});
@@ -52,6 +62,9 @@ let Tools = {
     },
     success: (res, data) => {
         return res.status(200).send({success: true, message: 'Success', data: data});
+    },
+    unauthorized: (res, message = null) => {
+        return res.status(401).send({success: false, message: message ? message : 'Unauthorized'});
     }
 
 }
