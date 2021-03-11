@@ -10,7 +10,6 @@ module.exports = (db) => {
 
         getPokemonById: async (req, res) => {
             const id = req.params.id;
-
             if (!id) {
                 return Tools.paramMissing(res);
             }
@@ -27,7 +26,6 @@ module.exports = (db) => {
 
         deletePokemonById: async (req, res) => {
             const id = req.body.id;
-
             if (!id) {
                 return Tools.paramMissing(res);
             }

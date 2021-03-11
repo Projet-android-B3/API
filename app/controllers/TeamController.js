@@ -5,13 +5,10 @@ module.exports = (db) => {
     const Tools = require('../utils/Tools');
     return {
         getTeam: async (req, res) => {
-
             const id = req.params.user_id;
-
             if (!id) {
                 return Tools.paramMissing(res);
             }
-
             try {
                 const team = await TeamEntity.getByUserId(id);
                 if (!team) {
@@ -24,14 +21,11 @@ module.exports = (db) => {
         },
 
         editTeam: async (req, res) => {
-
             const id = req.params.user_id;
             const pokemonList = req.body.list;
-
             if (!id || !pokemonList) {
                 return Tools.paramMissing(res);
             }
-
             try {
                 await TeamEntity.edit(id, pokemonList)
             } catch (err) {
