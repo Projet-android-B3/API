@@ -10,26 +10,30 @@
 
 __Les pokémons__
 
-GET `/getPokemons` -> renvoie tout les pokemons en base
-
-GET `/getPokemon/:id` (:id est l'id du pokemon recherché) -> renvoie un pokemon d'après son id
-
-DELETE `/deletePokemon/:id` -> (:id est l'id du pokemon recherché) -> supprime un pokemon d'après son id
+| Token | Méthode | URI | Body | Param | Description | 
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| Oui | GET | `/getPokemons` | | | Renvoie tout les pokemons
+| Oui | GET | `/getPokemon/:id` | | id | Renvoie tout les pokemons
+| Oui | DELETE | `/deletePokemon/:id` | | id | Renvoie tout les pokemons
 
 __Sécurité__
 
-POST `/login` (avec email et password(crypté) dans le body) -> Route de login, renvoie le user et son token
-
-POST `/register` (avec email, firstname, lastname, password(crypté) dans le body) -> Renvoie un code 200 sir- le register s'est bien effectué
+| Token | Méthode | URI | Body | Param | Description | 
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| Non | POST | `/login` | email, password | | Route de login, renvoie le user et son token
+| Non | POST | `/register` | email, password | | Renvoie un code 200 si le register s'est bien effectué
 
 __Les équipes__
 
-GET `/getTeam/:user_id` (:user_id est l'id du user recherché) -> renvoie l'équipe du user recherché
-
-POST `/getTeam/:user_id/edit` (:user_id est l'id du user recherché et list est la liste des pokémons) -> save l'édition de la liste de pokémons pour un user donné
+| Token | Méthode | URI | Body | Param | Description | 
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| Oui | GET | `/getTeam/:user_id` | | user_id | Renvoie l'équipe du user recherché
+| Oui | PUT | `/getTeam/:user_id/edit` | list | user_id | Save l'édition de la liste de pokémons pour un user donné
 
 __Les utilisateurs__
 
-GET `/users` -> renvoie tout les utilisateurs de la base
-
-POST `/deleteUser` (avec user_id dans le body) -> supprime un utilisateur par son id
+| Token | Méthode | URI | Body | Param | Description |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| Oui + admin | GET | `/users` | | | Renvoie tout les users
+| Oui + admin | DELETE | `/deleteUser` | user_id | | Supprime un utilisateur par son id
+| Oui + admin | PUT | `/changeStatus` | user_id, isAdmin(du user concerné par le changement) | | Modifie les droits d'un utilisateur
