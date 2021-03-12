@@ -38,7 +38,7 @@ module.exports = (db) => {
 
         changeStatus: async (req, res) => {
 
-            if (!req.body.isAdmin || !req.body.user_id) return Tools.paramMissing(res);
+            if (!req.body.user_id) return Tools.paramMissing(res, 'Il manque le isAdmin ou le user_id');
 
             try {
                 // Check if user to update exists
@@ -47,7 +47,7 @@ module.exports = (db) => {
                         id: req.body.user_id
                     }
                 });
-                if (!userToUpdate) return Tools.itemNotFound(res);
+                if (!userToUpdate) return Tools.itemNotFound(res, 'Pas de user trouvé avec le user_id fourni');
                 await Users.update({isAdmin: !userToUpdate.isAdmin}, {
                     where: {
                         id: req.body.user_id

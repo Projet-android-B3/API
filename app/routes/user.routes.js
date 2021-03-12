@@ -9,7 +9,7 @@ module.exports = (app, db) => {
 
     app.get('/users', TokenMiddleware.tokenCheck, AdminMiddleware.isAdmin, UserController.getAll);
 
-    app.delete('/deleteUser', TokenMiddleware.tokenCheck, AdminMiddleware.isAdmin, UserController.delete);
+    app.post('/deleteUser', TokenMiddleware.tokenCheck, AdminMiddleware.isAdmin, UserController.delete);
 
     app.put('/changeStatus', TokenMiddleware.tokenCheck, AdminMiddleware.isAdmin, UserController.changeStatus);
 }

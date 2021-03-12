@@ -35,5 +35,5 @@ __Les utilisateurs__
 | Token | Méthode | URI | Body | Param | Description |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | Oui + admin | GET | `/users` | | | Renvoie tout les users
-| Oui + admin | DELETE | `/deleteUser` | user_id | | Supprime un utilisateur par son id
+| Oui + admin | POST | `/deleteUser` | user_id | | Supprime un utilisateur par son id
 | Oui + admin | PUT | `/changeStatus` | user_id, isAdmin(du user concerné par le changement) | | Modifie les droits d'un utilisateur

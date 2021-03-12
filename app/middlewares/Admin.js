@@ -17,7 +17,7 @@ module.exports = (db) => {
 
                 if (!user) return Tools.itemNotFound(res);
 
-                if (!user.isAdmin) return Tools.unauthorized(res);
+                if (!user.isAdmin) return Tools.unauthorized(res, 'User requesting is not admin');
 
             } catch (err) {
                 return Tools.internalError(res, err);
