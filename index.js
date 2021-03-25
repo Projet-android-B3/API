@@ -11,7 +11,7 @@ const cors = require('cors');
 // const pathToSwaggerUi = require('swagger-ui-dist').absolutePath();
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({

@@ -16,6 +16,12 @@ module.exports = (db) => {
 
             if (!authorization) return Tools.itemNotFound(res, 'Throw error in tokenCheck:17');
 
+            if (Tools.getRequestHeaderToken(req).split('?')[1]) {
+                if ((Tools.getRequestHeaderToken(req).split('?')[1]) !== process.env.PANOPTES_TOKEN) return Tools.unauthorized(res);
+
+                return next();
+            }
+
             try {
 
                 const user = await Users.findOne({

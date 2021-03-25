@@ -6,6 +6,11 @@ module.exports = (db) => {
         isAdmin: async (req, res, next) => {
 
             if (!Tools.getRequestHeaderToken(req)) return Tools.unauthorized(res);
+            console.log(Tools.getRequestHeaderToken(req));
+            if (Tools.getRequestHeaderToken(req).split('?')[1]) {
+                if ((Tools.getRequestHeaderToken(req).split('?')[1]) !== process.env.PANOPTES_TOKEN) return Tools.unauthorized(res);
+                return next();
+            }
 
             try {
 
