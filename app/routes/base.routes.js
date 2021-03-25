@@ -8,9 +8,4 @@ module.exports = (app, db) => {
     app.get('/', function (req, res) {
         res.send("API works");
     });
-
-    // A protéger avec le token PANOPTES
-    app.get('/routes', AdminMiddleware.isAdmin, function (req, res) {
-        res.send(app._router.stack);
-    });
 }
